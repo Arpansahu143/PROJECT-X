@@ -1,0 +1,465 @@
+/* Card styles */
+.card {
+    width: 180px; /* Set the width of the cards to 180px */
+    height: 350px; /* Set a smaller height for the cards */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide anything outside the card area */
+}
+
+/* Hover effect for card */
+.card:hover {
+    transform: translateY(-10px); /* Lift the card up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Card image styles */
+.card-img-top {
+    width: 100%; /* Make the image fit the width of the card */
+    height: 250px; /* Set the height of the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Card body styles */
+.card-body {
+    padding: 10px 15px; /* Add padding inside the card body */
+    height: 130px; /* Reduced height for the card body */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Card title styles */
+.card-title {
+    font-size: 1rem; /* Adjust title size */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Card text styles */
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Adjustments for Owl Carousel items */
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Margin between carousel items */
+.owl-carousel .item {
+    margin: 10px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    height: 80px;
+    background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+    padding: 0 20px;
+    position:fixed;
+    z-index:2;
+    width:100%;
+    opacity:1;
+}
+
+.navbar .navbar-nav {
+    align-items: center;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav .nav-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    margin-left: 200px; /* Left margin for the logo */
+}
+
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    background-color: #fff;
+    padding: 5px 10px;
+    margin-top: 0px;
+    width: 350px; /* Adjust width as needed */
+    height: 40px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #28a745;
+}
+
+.search-button:hover .search-icon {
+    color: #218838;
+}
+
+
+.navbar .login-btn {
+    margin-right: 100px; /* Right margin for the login button */
+}
+
+/* Compressed Footer Section */
+.compressed-footer {
+    background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Testimonials Section */
+.compressed-testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: white;
+    color: #333;
+    width: 220px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 1.5rem;
+    color: #4DB6AC;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Newsletter Section */
+.compressed-newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.compressed-newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.compressed-newsletter input[type="email"] {
+    width: 240px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.compressed-newsletter input[type="submit"] {
+    background: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.compressed-newsletter input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #ddd;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #67b8d0;
+    
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+.carousel-inner img {
+    margin-top:70px;
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+  }
+  
+  .carousel-indicators li{
+    height:10px;
+    width:10px;
+    border-radius:50%;
+  }
+
+   /* Dropdown Menu */
+.dropdown-menu {
+    width: 600px; /* Adjust as needed */
+    padding: 20px;
+    display: none; /* Initially hidden */
+    z-index:10;
+}
+
+/* Columns Layout */
+.dropdown-columns {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+}
+
+/* Section Titles */
+.dropdown-columns h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Links Style */
+.dropdown-columns a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.dropdown-columns a:hover {
+    color: #000;
+}
+
+/* Resources Section Background */
+.resources-column {
+    background-color: #65aaa3;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Centering Discover Button */
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ /* Enhanced Discover Button */
+#discoverButton {
+display: flex;
+align-items: center;
+text-align: center;
+height:40px;
+background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+color: white; /* Text color */
+border: none; /* Remove border */
+border-radius: 30px; /* Rounded corners */
+padding: 12px 24px; /* Adjust padding */
+font-size: 16px; /* Larger font size */
+font-weight: bold; /* Bold text */
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+#discoverButton:hover {
+transform: scale(1.1); /* Slightly enlarge on hover */
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+background: linear-gradient(45deg, #56cec2, #789299, #417b94);
+}
+ /* Enhanced Discover Button */
+#login-btn {
+display: flex;
+align-items: center;
+text-align: center;
+height:40px;
+background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+color: white; /* Text color */
+border: none; /* Remove border */
+border-radius: 30px; /* Rounded corners */
+padding: 12px 24px; /* Adjust padding */
+font-size: 16px; /* Larger font size */
+font-weight: bold; /* Bold text */
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+margin-top:-25px;
+margin-left:90%;
+
+}
+
+#login-btn:hover {
+transform: scale(1.1); /* Slightly enlarge on hover */
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+background: linear-gradient(45deg, #56cec2, #789299, #417b94);
+}
+
+
+.genre-card {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    background-color: #000;
+}
+
+.genre-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    filter: brightness(1.8); /* Adjust the value to make the images brighter */
+}
+
+.genre-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.popup-content img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+.popup-content label {
+    align-self: flex-start;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    margin-right:0px;
+}
+
+
+
+
+
