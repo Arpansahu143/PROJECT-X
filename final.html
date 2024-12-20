@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHELF CONTROL</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="final.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Logo</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <!-- Discover Dropdown -->
+                <li class="nav-item dropdown">
+
+                    <div class="dropdown">
+                        <button id="discoverButton" class="btn btn-primary dropdown-toggle"
+                            style="margin-right:20px; color:rgb(255, 255, 255);" type="button">
+                            Discover
+                        </button>
+                        <div id="dropdownMenu" class="dropdown-menu">
+                            <div class="dropdown-columns">
+                                <!-- Genres Column 1 -->
+                                <div>
+                                    <h5>Genres</h5>
+                                    <a href="#" style="color:black;">Action & Adventure</a>
+                                    <a href="#" style="color:black;">Bios & History</a>
+                                    <a href="#" style="color:black;">Children's</a>
+                                    <a href="#" style="color:black;">Fantasy</a>
+                                    <a href="#" style="color:black;">Historical Fiction</a>
+                                </div>
+
+                                <!-- Genres Column 2 -->
+                                <div>
+                                    <h5>&nbsp;</h5> <!-- Blank title for alignment -->
+                                    <a href="#" style="color:black;">Horror</a>
+                                    <a href="#" style="color:black;">Literary Fiction</a>
+                                    <a href="#" style="color:black;">Mystery & Thriller</a>
+                                    <a href="#" style="color:black;">Non-Fiction</a>
+                                    <a href="#" style="color:black;">Romance</a>
+                                </div>
+
+                                <!-- Resources Column -->
+                                <div class="resources-column">
+                                    <h5>Resources</h5>
+                                    <a href="#" style="color:black;">Authors</a>
+                                    <a href="#" style="color:black;">Languages</a>
+                                    <a href="#" style="color:black;">Genres</a>
+                                    <a href="#" style="color:black;">Articles</a>
+                                    <a href="#" style="color:black;">Author Interviews</a>
+                                    <a href="#" style="color:black;">Discuss</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        </li>
+
+        <!-- Search Bar -->
+        <li class="nav-item search-container">
+            <input class="search-input" type="text" placeholder="Search by title, author or keyword"
+                aria-label="Search" style="">
+            <button class="search-button">
+                <span class="search-icon" style="">&#128269;</span>
+            </button>
+            <div class="popup" id="popup2"><div id="search-results"></div></div>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item login-btn">
+            <button class="btn btn-outline-light" id="login-btn" style="border-radius:30px;"
+                type="button">Login</button>
+            <div class="popup" id="popup3">
+                <div class="container bg-white p-4 rounded shadow" style="max-width: 400px;">
+                    <button type="button" class="close-btn" id="cls-btn" data-dismiss="alert" style="margin-top:-23px;border:none; background-color:white;font-size:28px;margin-left:340px">&times;</button>
+                    <img src="1.webp" class="rounded-circle d-block mx-auto" alt="">
+                    <h2 class=" text-primary" style="left:500px">WELCOME TO <BR>SHELF CONTROL</h2>
+                    <h3 class=" mb-4">Login form</h3>
+                    <p class=" text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus, officia!</p>
+
+                    <form id="lfm">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="pass" name="password"
+                                placeholder="Enter your password" required>
+                            <div id="emsg" class="text-danger small mt-1"></div>
+                        </div>
+                        <button type="submit" class="btn btn-info d-block mx-auto">submit</button>
+                    </form>
+                </div>
+            </div>
+        </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- 2nd division -->
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="1.jpg" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption" style="z-index:1;">
+                    <h3>LOTS OF EBOOKS. 100% FREE</h3>
+                    <p style="font-weight:bold;">Wellcome to our friendly neighbourhood Library. At the end of this
+                        project we will have more than 50000 free Ebooks for you</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="z-index:1;">
+                <img src="4.jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>FREE AND DISCOUNTED BEST SELLERS</h3>
+                    <p>JOIN 150,000+ FELLOW READERS. GET FREE AND DISCOUNTED BEST SELLERS STRAIGHT TO YOUR INBOX WITH
+                        THE <B STYLE="color:rgb(2, 204, 249)">SHELF CONTOL</B> EBOOKS</p>
+                    <p>DEALS NEWSLETTER. <a href=" " class="btn btn-link" style="color:cyan; ">sign up</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="3.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption" style="z-index:1;">
+                    <h3>THE ULTIMATE GUIDE TO FREE EBOOKS</h3>
+                    <p>NOT SURE WHAT TO READ NEXT? EXPLORE YOUR CATALOG OF PUBLIC DOMAIN BOOKS WITH OUR EDITORS. SOME
+                        REAL GEMS ARE HIDDEN IN OUR LIBRARY.
+                        <A class="btn btn-link" style="color:cyan; ">read more</A>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!-- Bootstrap container -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- Owl Carousel -->
+                <div id="owl-carousel" class="owl-carousel owl-theme">
+                    <!-- 15 Cards -->
+                    <div class="item">
+                        <div class="card">
+                            <a href="s1.html"> <img src="ll.png" class="card-img-top" alt="Card 1"></a>
+                            <div class="card-body">
+                                <h5 class="card-title">From coward to warrior</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <a href="s2.html"><img src="02.png" class="card-img-top" alt="Card 2"></a>
+                            <div class="card-body">
+                                <h5 class="card-title">The Wandering Sword</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">This is card number 3 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 4</h5>
+                                <p class="card-text">This is card number 4 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 5</h5>
+                                <p class="card-text">This is card number 5 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 6</h5>
+                                <p class="card-text">This is card number 6 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 7">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 7</h5>
+                                <p class="card-text">This is card number 7 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 8</h5>
+                                <p class="card-text">This is card number 8 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 9">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 9</h5>
+                                <p class="card-text">This is card number 9 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 10">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 10</h5>
+                                <p class="card-text">This is card number 10 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 11">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 11</h5>
+                                <p class="card-text">This is card number 11 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 12">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 12</h5>
+                                <p class="card-text">This is card number 12 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 13">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 13</h5>
+                                <p class="card-text">This is card number 13 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 14">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 14</h5>
+                                <p class="card-text">This is card number 14 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/180x150" class="card-img-top" alt="Card 15">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 15</h5>
+                                <p class="card-text">This is card number 15 in the carousel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- mid section -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Browse Genres <small><a href="#" class="text-success">(view all)</a></small></h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="romance.webp" alt="Romance"
+                        style="opacity:0.9;height:200px;width:200px;object-fit:cover;">
+                    <div class="overlay" style="opacity:0.7;">Romance</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="action.webp" alt="Action & Adventure"
+                        style="opacity:0.9;height:200px;width:200px;object-fit:cover;">
+                    <div class="overlay" style="opacity:0.7;">Action & Adventure</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Mystery & Thriller">
+                    <div class="overlay">Mystery & Thriller</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Biographies & History">
+                    <div class="overlay">Biographies & History</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Children's">
+                    <div class="overlay">Children's</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Young Adult">
+                    <div class="overlay">Young Adult</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Fantasy">
+                    <div class="overlay">Fantasy</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Historical Fiction">
+                    <div class="overlay">Historical Fiction</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Horror">
+                    <div class="overlay">Horror</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Literary Fiction">
+                    <div class="overlay">Literary Fiction</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Non-Fiction">
+                    <div class="overlay">Non-Fiction</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="genre-card">
+                    <img src="https://via.placeholder.com/150" alt="Science Fiction">
+                    <div class="overlay">Science Fiction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="compressed-footer">
+        <div class="compressed-testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>Amazing service! They exceeded my expectations at every step.</p>
+                    <h4>— Arpan Sahu</h4>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>Superb experience. I highly recommend their services to everyone.</p>
+                    <h4>— Swarup Das</h4>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>Professional and reliable. Couldn't ask for better!</p>
+                    <h4>— Soumya Ranjan Behera</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="compressed-newsletter">
+            <h2>Stay Updated</h2>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 SHELF CONTROL. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <!-- jQuery, Bootstrap, and Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script src="final.js"></script>
+
+
+
+</body>
+
+</html>
