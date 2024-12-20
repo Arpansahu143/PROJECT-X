@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .testimonial {
+        background-color: #f1f1f1;
+        padding: 50px 0;
+        text-align: center;
+    }
+    .newsletter {
+        background-color: #343a40;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+    }
+    footer {
+        background-color: #222;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+     .owl-carousel{
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        
+    }
+    .item{
+        display: flex;
+        justify-content:center ;
+        border: 1px solid black;
+        width:100px;
+        align-items: center;
+    } 
+
+    
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+</script>
+
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><h4>1</h4></div>
+        <div class="item"><h4>2</h4></div>
+        <div class="item"><h4>3</h4></div>
+        <div class="item"><h4>4</h4></div>
+        <div class="item"><h4>5</h4></div>
+        <div class="item"><h4>6</h4></div>
+        <div class="item"><h4>7</h4></div>
+        <div class="item"><h4>8</h4></div>
+        <div class="item"><h4>9</h4></div>
+        <div class="item"><h4>10</h4></div>
+        <div class="item"><h4>11</h4></div>
+        <div class="item"><h4>12</h4></div>
+    </div>
+
+
+
+    <div class="testimonial">
+        <div class="container">
+            <h2 class="mb-4">What Our Readers Say</h2>
+            <blockquote class="blockquote">
+                <p class="mb-0">"ManyBooks is my go-to site for finding amazing eBooks!"</p>
+                <footer class="blockquote-footer">A Happy Reader</footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <div class="container">
+            <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+            <form class="form-inline justify-content-center">
+                <input type="email" class="form-control mr-2" placeholder="Enter your email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ManyBooks Clone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
