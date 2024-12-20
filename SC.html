@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Control</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+            position: relative;
+            overflow: hidden;
+            perspective: 1000px; /* Adding depth for 3D effects */
+        }
+
+        /* Parallax Background */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?library,books') no-repeat center center fixed;
+            background-size: cover;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+
+        /* Content Styling */
+        .content {
+            z-index: 2;
+            text-align: center;
+            color: white;
+            transition: transform 1s ease;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeInText 3s ease-in forwards;
+            animation-delay: 1s;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Fade In Text */
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Button Styling */
+        .content a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            background: linear-gradient(45deg, #ff6f61, #de6262);
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .content a:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #de6262, #ff6f61);
+        }
+
+        /* 3D Flip Animation */
+        .flip-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0f2027;
+            transform-origin: top right;
+            transform: rotateY(0);
+            transition: transform 1s ease-in-out;
+        }
+
+        .flip-container.flipping {
+            transform: rotateY(-180deg);
+        }
+
+        /* Floating Icons */
+        .floating-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(2) {
+            top: 50%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .floating-icon:nth-child(3) {
+            top: 70%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+
+        .floating-icon:nth-child(4) {
+            top: 30%;
+            left: 60%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax"></div>
+    <div class="flip-container" id="flipContainer">
+        <div class="container">
+            <div class="content">
+                <h1>SHELF CONTROL</h1>
+                <p>Welcome to the future of organized knowledge</p>
+                <a href="#" id="enterBtn">Enter Website</a>
+            </div>
+            <!-- Floating Icons -->
+            <div class="floating-icon" style="background: url('https://cdn-icons-png.flaticon.com/512/1946/1946488.png') center/cover no-repeat;"></div>
+            <div class="floating-icon" style="background: url('https://cdn-icons-png.flaticon.com/512/2917/2917995.png') center/cover no-repeat;"></div>
+            <div class="floating-icon" style="background: url('https://cdn-icons-png.flaticon.com/512/3215/3215626.png') center/cover no-repeat;"></div>
+            <div class="floating-icon" style="background: url('https://cdn-icons-png.flaticon.com/512/2232/2232688.png') center/cover no-repeat;"></div>
+        </div>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="enterSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    <audio id="backgroundSound" src="https://www.soundjay.com/button/beep-09.wav" loop autoplay></audio>
+
+    <script>
+       $('#enterBtn').click(function(e) {
+    e.preventDefault();
+
+    // Play sound on click
+    $('#enterSound')[0].play();
+
+    // Trigger the flip animation
+    $('#flipContainer').addClass('flipping');
+
+    // After the flip animation completes, navigate to final.html
+    setTimeout(function() {
+        window.location.href = 'final.html'; // Redirect to final.html
+    }, 500); // Reduced delay (500ms) for a faster transition
+});
+
+        // Parallax scrolling effect
+        $(window).scroll(function() {
+            var scrollTop = $(this).scrollTop();
+            $('.parallax').css('transform', 'translateY(' + scrollTop * 0.5 + 'px)');
+        });
+    </script>
+</body>
+</html>
