@@ -91,7 +91,7 @@
         }
 
         .content a:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.1) ;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #de6262, #ff6f61);
         }
@@ -173,23 +173,20 @@
         </div>
     </div>
 
-    <!-- Sound Effects -->
-    <audio id="enterSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
-    <audio id="backgroundSound" src="https://www.soundjay.com/button/beep-09.wav" loop autoplay></audio>
+
 
     <script>
        $('#enterBtn').click(function(e) {
     e.preventDefault();
 
-    // Play sound on click
-    $('#enterSound')[0].play();
+    
 
     // Trigger the flip animation
     $('#flipContainer').addClass('flipping');
 
     // After the flip animation completes, navigate to final.html
     setTimeout(function() {
-        window.location.href = 'final.html'; // Redirect to final.html
+        window.location.href = 'final.html'; 
     }, 500); // Reduced delay (500ms) for a faster transition
 });
 
