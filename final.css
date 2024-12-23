@@ -329,7 +329,7 @@ display: flex;
 align-items: center;
 text-align: center;
 height:40px;
-background: linear-gradient(45deg, #4DB6AC, #61767c, #2c5364);
+background: linear-gradient(45deg, #56cec2, #789299, #417b94);
 color: white; /* Text color */
 border: none; /* Remove border */
 border-radius: 30px; /* Rounded corners */
